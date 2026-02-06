@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parlona"
+version = "1.0.0"
+description = "Call analytics pipeline for speech-to-text, summarization, and insights extraction"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Parlona Team", email = "contact@parlona.com"}
+]
+keywords = ["speech-to-text", "call-analytics", "whisper", "llm", "summarization"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+dependencies = [
+    "faster-whisper>=1.0.3",
+    "openai>=1.54.4",
+    "pydantic>=2.6.4",
+    "pydantic-settings>=2.2.1",
+    "numpy>=1.26.4",
+    "soundfile>=0.12.1",
+    "langdetect>=1.0.9",
+    "resampy>=0.4.2",
+]
+
+[project.optional-dependencies]
+server = [
+    "redis>=5.0.1",
+    "fastapi>=0.110.1",
+    "uvicorn>=0.29.0",
+    "sqlalchemy>=2.0.29",
+    "asyncpg>=0.29.0",
+    "psycopg>=3.1.18",
+    "alembic>=1.13.1",
+    "python-multipart>=0.0.9",
+]
+gpu = ["nvidia-ml-py>=12.0.0"]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/parlona/parlona"
+Documentation = "https://github.com/parlona/parlona"
+Repository = "https://github.com/parlona/parlona"
+Issues = "https://github.com/parlona/parlona/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+parlona = ["py.typed"]
