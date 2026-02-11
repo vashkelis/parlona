@@ -21,12 +21,6 @@ from parlona.pipeline import CallProcessor
 from parlona.stt import STTEngine, STTConfig
 from parlona.llm import LLMClient, LLMConfig
 
-# Configure basic logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
 __all__ = [
     "process",
     "CallProcessor",

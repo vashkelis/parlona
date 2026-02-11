@@ -8,6 +8,12 @@ Call analytics pipeline for speech-to-text, summarization, and insights extracti
 pip install parlona
 ```
 
+Set your LLM API key (for OpenAI):
+
+```bash
+export OPENAI_API_KEY="your-api-key"
+```
+
 ## Quick Start
 
 ```python
@@ -81,4 +87,4 @@ summary, headline, lang, sentiment, entities, score = \
 
 ## License
 
-MIT
+Apache-2.0
