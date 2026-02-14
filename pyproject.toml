@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "parlona"
-version = "1.0.0"
+version = "1.0.5"
 description = "Call analytics pipeline for speech-to-text, summarization, and insights extraction"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -56,10 +56,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/parlona/parlona"
-Documentation = "https://github.com/parlona/parlona"
-Repository = "https://github.com/parlona/parlona"
-Issues = "https://github.com/parlona/parlona/issues"
+Homepage = "https://gitlab.com/parlona/parlona"
+Documentation = "https://gitlab.com/parlona/parlona"
+Repository = "https://gitlab.com/parlona/parlona"
+Issues = "https://gitlab.com/parlona/parlona/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
